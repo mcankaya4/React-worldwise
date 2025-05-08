@@ -19,7 +19,7 @@ function Home() {
           you have wandered the world.
         </h2>
         {/* app rotasına link atıyoruz. */}
-        <Link to="/app" className="cta">
+        <Link to="/login" className="cta">
           Start tracking now
         </Link>
       </section>

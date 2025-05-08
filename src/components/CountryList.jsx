@@ -2,11 +2,14 @@ import styles from "./CountryList.module.css";
 import Spinner from "./Spinner.jsx";
 import CountryItem from "./CountryItem.jsx";
 import Message from "./Message.jsx";
+import { useCities } from "../contexts/CityContext.jsx";
 
-function CountryList({ cities, isLoading }) {
+function CountryList() {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <Spinner />;
 
-  if (!cities.length) return <Message message={"Cities is zero found."} />;
+  if (!cities.length) return <Message message={"Country is zero found."} />;
 
   // Ülke isimlerini ve emojilerini grup olarak döndürür.
   const countries = Array.from(
